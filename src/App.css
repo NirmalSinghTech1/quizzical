@@ -1,0 +1,130 @@
+#root {
+  max-width: 1280px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Main Container */
+main {
+  width: 550px;
+  height: 550px;
+  background-color: #F5F7FB;
+  color: #293264;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 4;
+}
+
+/* Front page styling */
+main h1 {
+  font-weight: 700;
+  font-family: "Karla", sans-serif;
+}
+
+main::after {
+  position: absolute;
+  content: url("./assets/mango-shape.png");
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+main::before {
+  position: absolute;
+  content: url("./assets/mango-shape-2.png");
+  bottom: -6px;
+  left: 0;
+  z-index: 0;
+}
+
+/* Start quiz button */
+.start-quiz-btn {
+  background-color: #4D5B9E;
+  margin-top: 1.8em;
+}
+
+/* Quiz container - page 2 */
+div.form-container {
+  /* margin-left: 4em; */
+  margin-top: 2em;
+  max-width: 460px;
+  height: 100%;
+  z-index: 9;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 1em;
+  height: 100%;
+}
+
+div.form-container > form > fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #DBDEF0;
+  padding-bottom: 1em;
+}
+
+div.form-container > form legend {
+  font-size: 1.1rem;
+  font-family: "Karla", sans-serif;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: .6em;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+fieldset label {
+  margin-bottom: 0.4em;
+}
+
+form fieldset label:not(:last-of-type) {
+  margin-right: .7em;
+}
+
+form fieldset label {
+  font-family: "Inter", sans-serif;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #4D5B9E;
+  padding: .1em 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+form fieldset label:hover {
+  background-color: #D6DBF5;
+  border: 1px solid transparent;
+}
+
+form fieldset label:active {
+  transform: scale(0.96);
+}
+
+input[type="radio"]:checked + label {
+  background-color: #D6DBF5;
+  border: 1px solid transparent;
+}
+
+.check-answers-btn {
+  font-size: .9rem;
+  margin-block: 2em;
+  align-self: center;
+  margin-top: auto;
+}
