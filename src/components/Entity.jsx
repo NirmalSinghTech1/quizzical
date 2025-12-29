@@ -1,34 +1,54 @@
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
+import { decode } from 'html-entities'
 
 function shuffle(array) {
-    let currentIndex = array.length
-
+    let currentIndex = array.length, t
     // While there are elements to shuffle
-    while(currentIndex != 0) {
+    while(currentIndex) {
         const randomIndex = Math.floor(Math.random() * currentIndex)
-        currentIndex--;
+        currentIndex--
         
         // Shuffle elements
-        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+        t = array[currentIndex]
+        array[currentIndex] = array[randomIndex]
+        array[randomIndex] = t
     }
+
+    return array
 }
 
 export default function Entity(props) {
-    // Shuffle options before rendering
-    shuffle(props.options)
+    const [options, setOptions] = useState(() => shuffle(props.options))
+    // console.log('optios', options)
+    const areAllOptionsSelected = props.checkAnswer != null
+    const currentOption = areAllOptionsSelected && props.checkAnswer[props.id-1].option
+    const isCurrentOptionCorrect = areAllOptionsSelected && props.checkAnswer[props.id-1].isCorrect
 
-    const optionElements = props.options.map((item, index) => {
+    const optionElements = options.map((item, index) => {
         return (
             <Fragment key={index}>
-                <input type="radio" id={item} value={item} name={`question_${props.id}`} />
-                <label htmlFor={item}>{item}</label>
+                <input 
+                    type="radio" 
+                    id={item} 
+                    value={item} 
+                    name={`question_${props.id}`} 
+                />
+                <label 
+                    htmlFor={item}
+                    style={{pointerEvents: areAllOptionsSelected ? 'none' : 'all'}}
+                    className={ currentOption === item ?
+                        isCurrentOptionCorrect ? 'correct' : 'incorrect'
+                    : areAllOptionsSelected ? 'disable' : ''}
+                >
+                    {decode(item)}
+                </label>
             </Fragment>
         )
     })
 
     return (
         <fieldset>
-            <legend>{props.question}</legend>
+            <legend>{decode(props.question)}</legend>
             {optionElements}
         </fieldset>
     )

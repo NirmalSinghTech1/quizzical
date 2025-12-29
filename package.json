@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "html-entities": "^2.6.0",
     "react": "^19.2.0",
+    "react-confetti": "^6.4.0",
     "react-dom": "^19.2.0",
     "react-spinners": "^0.17.0",
     "swr": "^2.3.8"

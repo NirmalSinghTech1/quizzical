@@ -30,9 +30,9 @@ h1, h2, p {
 
 button {
   border-radius: 15px;
-  padding: 0.6em 3em;
+  padding: 0.6em 4em;
   font-family: inherit;
-  font-weight: 4  00;
+  font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
   outline: none;
@@ -48,8 +48,7 @@ button:hover {
 }
 
 button:focus {
-  outline: 1px solid #1A1A1A;
-  outline-offset: 0.3em;
+  opacity: 0.6;
 }
 
 button:active {
