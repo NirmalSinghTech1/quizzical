@@ -1,16 +1,38 @@
-# React + Vite
+![HTML](https://img.shields.io/badge/HTML-blue)
+![CSS](https://img.shields.io/badge/CSS-orange)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow) 
+![React](https://img.shields.io/badge/React-skyblue)
+![Vite](https://img.shields.io/badge/Vite-purple)
+![RESTful API](https://img.shields.io/badge/RESTful_API-green)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 🧠 Quizzical
 
-## React Compiler
+*Quizzical* is a free, user-friendly quiz web application designed to help users test and improve their technical knowledge. Built with **React** and **Vite**, the app offers a smooth, fast, and engaging quiz experience focused on topics like computers, programming, and related technologies.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+* Multiple-choice quiz questions based on computers and programming
+* Score calculation based on the correctness of selected options
+* Randomly generated mid-level difficulty questions.
+* Interactive and easy-to-use interface.
+* Helps users learn and enhance their technical knowledge.
 
-## Expanding the ESLint configuration
+## How to use
+* Click the **Start Quiz** button to begin.
+* Five MCQ questions will be displayed.
+* Select one option for each question.
+* Once all questions are answered, the **Check Answers** button becomes available.
+* Click **Check Answer** to view your score.
+* Click **Play again** to restart with a new set of randomly generated quiz questions.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies used
+* [React](https://react.dev/)
+* [Vite](https://vite.dev/)
+* [Open Trivia Database API](https://opentdb.com/)
+
+## React dependencies and packages used
+* [SWR(Stale While Revalidate) - React hook library by Vercel](https://swr.vercel.app/)
+* [React Spinners](https://www.npmjs.com/package/react-spinners)
+* [HTML Entities](https://www.npmjs.com/package/html-entities)
+* [React Confetti](https://www.npmjs.com/package/react-confetti)
