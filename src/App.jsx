@@ -78,7 +78,7 @@ function App() {
         {page === 'quizpage' && <div className='form-container'>
           {/* If API data is still loading, show a loader, else render the data */}
           {isValidating || isMutating 
-          ? <ClipLoader color='#4D5B9E' /> 
+          ? <div style={{margin: '0 auto'}}><ClipLoader color='#4D5B9E' /></div>
           : <form onSubmit={checkAnswers}>
 
               {/* Quiz Questions with options */}
