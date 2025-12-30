@@ -31,8 +31,18 @@
 * [Vite](https://vite.dev/)
 * [Open Trivia Database API](https://opentdb.com/)
 
-## React dependencies and packages used
+## React Dependencies & Packages
 * [SWR(Stale While Revalidate) - React hook library by Vercel](https://swr.vercel.app/)
 * [React Spinners](https://www.npmjs.com/package/react-spinners)
 * [HTML Entities](https://www.npmjs.com/package/html-entities)
 * [React Confetti](https://www.npmjs.com/package/react-confetti)
+
+
+🔗 Live Preview: [Quizzical](https://nirmalsinghtech1.github.io/quizzical/)
+
+### Let's Connect
+
+[LinkedIn](www.linkedin.com/in/nirmal-singh-5005b92b2)
+[Twitter](https://x.com/nirmalsingh_007)
+
+
