@@ -28,6 +28,7 @@ export default function Entity(props) {
 
     // Option elements
     const optionElements = options.map((item, index) => {
+        
         return (
             <Fragment key={index}>
                 <input 
@@ -38,8 +39,11 @@ export default function Entity(props) {
                 />
                 <label 
                     htmlFor={`q${props.id}_${item}`} 
-                    style={{pointerEvents: areAllOptionsSelected ? 'none' : 'all'}}
-                    
+                    style={{
+                        pointerEvents: areAllOptionsSelected ? 'none' : 'all',
+                        backgroundColor: areAllOptionsSelected && item === props.checkAnswer[props.id-1].correctAnswer ? '#94D7A2' : ""
+                    }}
+
                     // Add 'correct' class if selected option is correct else add 'incorrect' class and apply 'disable' class to the remaining options.
                     className={currentOption === item ?
                         isCurrentOptionCorrect ? 'correct' : 'incorrect'

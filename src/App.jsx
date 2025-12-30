@@ -5,7 +5,7 @@ import useSWRImmutable from 'swr/immutable'
 import { ClipLoader } from 'react-spinners'
 import Confetti from 'react-confetti'
 
-// Fetcher function for swr
+// Fetcher function for SWR
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
       // Increase count if the user selected option is correct
       setCorrectCount(prevCount => selectedOption === correctAnswer ? prevCount + 1 : prevCount)
       // Save selected option with its correctness status
-      setCheckAnswer(prevState => [...prevState, {option : selectedOption, isCorrect :selectedOption === correctAnswer}])
+      setCheckAnswer(prevState => [...prevState, {option : selectedOption, correctAnswer: correctAnswer , isCorrect :selectedOption === correctAnswer}])
     }
   }
 
