@@ -12,8 +12,6 @@
 
 /* Main Container */
 main {
-  /* width: 550px;
-  height: 550px; */
   width: 100%;
   height: 100%;
   background-color: #F5F7FB;
@@ -62,12 +60,13 @@ main::before {
 
 /* Quiz container - page 2 */
 div.form-container {
-  margin-top: 2em;
-  width: 80%;
-  margin-right: 4em;
+  width: 100%;
   height: 100%;
   max-height: 100vh;
   z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-container form {
@@ -153,6 +152,7 @@ input[type="radio"]:checked + label {
   margin-top: auto;
 }
 
+/* Page 2 bottom - Play again section */
 .play-again-section {
   display: flex;
   align-items: center;
